@@ -1,0 +1,114 @@
+.section-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+}
+
+.section-header p {
+    color: #9ca3af;
+    max-width: 520px;
+}
+
+.timeline {
+    margin-top: 1.5rem;
+    position: relative;
+    padding-left: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.55rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(148, 163, 184, 0.35);
+}
+
+.contact-card {
+    position: relative;
+    background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 55%),
+        rgba(15, 23, 42, 0.96);
+    border-radius: 1rem;
+    padding: 1.3rem 1.4rem;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    left: -1.05rem;
+    top: 1.3rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #38bdf8;
+    border: 2px solid #0f172a;
+    box-shadow: 0 0 6px #38bdf8;
+}
+
+.contact-card header {
+    margin-bottom: 0.75rem;
+}
+
+.role {
+    font-weight: 600;
+    color: #e5e7eb;
+    font-size: 1rem;
+}
+
+.label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: white;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.1rem;
+}
+
+.contact-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-card li {
+    padding: 0.35rem 0;
+    color: #cbd5f5;
+    font-size: 0.86rem;
+}
+
+.contact-card a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.location {
+    color: #38bdf8;
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        padding-left: 1.2rem;
+    }
+
+    .timeline::before {
+        left: 0.4rem;
+    }
+
+    .contact-card::before {
+        left: -0.8rem;
+    }
+
+    .contact-card {
+        padding: 1rem 1.1rem;
+    }
+}

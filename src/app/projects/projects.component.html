@@ -1,0 +1,23 @@
+<div class="section-header">
+    <h2>Projects</h2>
+    <p>A selection of work that reflects my experience in full-stack development and automation.</p>
+</div>
+
+<div class="projects-timeline">
+    <article class="project-card" *ngFor="let project of projects">
+        <header>
+            <h3>{{ project.name }}</h3>
+            <p class="description">{{ project.description }}</p>
+        </header>
+
+        <p class="highlight">{{ project.highlight }}</p>
+
+        <ul class="tech-list">
+            <li *ngFor="let t of project.tech">{{ t }}</li>
+        </ul>
+
+        <a *ngIf="project.link" class="project-link" [href]="project.link" target="_blank" rel="noreferrer">
+            View on GitHub →
+        </a>
+    </article>
+</div>
