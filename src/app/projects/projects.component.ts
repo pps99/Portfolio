@@ -19,6 +19,15 @@ interface Project {
 export class ProjectsComponent {
   projects: Project[] = [
     {
+      name: 'Expense Tracker',
+      description:
+        'Feature-rich expense tracking application with interactive data visualizations, real-time updates, and local storage persistence. Allows users to manage their finances with category-based analysis, monthly trends, and comprehensive dashboard analytics.',
+      tech: ['Angular 18', 'TypeScript', 'Chart.js', 'RxJS', 'Local Storage API'],
+      highlight:
+        'Implemented standalone component architecture, reactive state management with RxJS, and integrated Chart.js for dynamic data visualizations with doughnut and bar charts.',
+      link: 'https://expense-tracker-dun-eta-15.vercel.app/'
+    },
+    {
       name: 'Online Cake Ordering Platform',
       description:
         'Full-stack platform for ordering cakes online with user and admin dashboards, real-time updates, and balance management.',
