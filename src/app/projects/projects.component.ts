@@ -37,13 +37,21 @@ export class ProjectsComponent {
       link: 'https://github.com/pps99/uni_project/tree/master'
     },
     {
-      name: 'Cake Shop Website (Angular)',
+      name: 'Full-Stack E-commerce Application',
       description:
-        'A responsive cake shop web application built with Angular that allows users to browse products and place orders.',
-      tech: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+        'A full-stack e-commerce application with product management, cart, orders, and an admin dashboard with real-time analytics.',
+      tech: [
+        'Angular 18',
+        'TypeScript',
+        'ASP.NET Core Web API',
+        'Entity Framework Core',
+        'SQL Server',
+        'JWT Authentication',
+        'Chart.js'
+      ],
       highlight:
-        'Focus on clean UI, reusable components, and a simple ordering experience.',
-      link: 'https://github.com/pps99/Cake_Shop_Web_With-Angular'
+        'Includes role-based authentication, admin dashboard with orders/revenue charts, top-selling products analytics, and secure REST APIs.',
+      link: 'https://github.com/pps99/ecommerce-app/tree/main'
     },
     {
       name: 'OldPhone Text Converter',
