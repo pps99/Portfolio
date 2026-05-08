@@ -24,7 +24,7 @@ export class ExperienceComponent {
       company: 'RED LAMP',
       company_site_link: 'https://www.redlamp.tech/#/',
       location: 'Bangkok, Thailand',
-      period: 'Dec 2024 – Present',
+      period: 'Dec 2024 – Apr 2026',
       points: [
         'Develop and maintain automated test scripts for web apps using Selenium and Robot Framework.',
         'Automate mobile app testing with Appium, reducing manual test effort.',
