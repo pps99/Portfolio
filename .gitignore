@@ -44,5 +44,3 @@ Thumbs.db
 #env file
 .env
 
-# Environment files with secrets
-src/environments/environment.ts
