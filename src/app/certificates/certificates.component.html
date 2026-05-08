@@ -1,0 +1,46 @@
+<div class="section-header">
+  <span class="section-label">Credentials</span>
+  <h2>Certificates & <span class="gradient-text">Certifications</span></h2>
+  <p>Verified credentials reflecting continuous learning and expertise in emerging technologies.</p>
+</div>
+
+<div class="certs-grid">
+  <article class="cert-card" *ngFor="let cert of certificates">
+    <div class="cert-glow"></div>
+
+    <div class="cert-top">
+      <div class="cert-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <span class="cert-year">{{ cert.year }}</span>
+    </div>
+
+    <div class="cert-body">
+      <p class="cert-track">{{ cert.track }}</p>
+      <h3 class="cert-title">{{ cert.title }}</h3>
+      <p class="cert-description">{{ cert.description }}</p>
+    </div>
+
+    <div class="cert-topics">
+      <span class="topic-tag" *ngFor="let topic of cert.topics">{{ topic }}</span>
+    </div>
+
+    <div class="cert-footer">
+      <div class="cert-badge">
+        <span class="badge-dot"></span>
+        Verified Certificate
+      </div>
+    </div>
+  </article>
+</div>
+
+<div class="learning-note">
+  <div class="note-icon">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+    </svg>
+  </div>
+  <p>Continuously expanding expertise in AI, full-stack development, and automation engineering.</p>
+</div>

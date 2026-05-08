@@ -1,18 +1,23 @@
 <div class="section-header">
-    <h2>Skills</h2>
-    <p>A mix of languages, frameworks, tools, and soft skills I use in real projects.</p>
+  <span class="section-label">Expertise</span>
+  <h2>Skills &amp; <span class="gradient-text">Technologies</span></h2>
+  <p>A curated set of languages, frameworks, and tools I apply in production environments.</p>
 </div>
 
-<div class="skills-timeline">
-    <article class="skills-card" *ngFor="let group of skillGroups">
-        <header>
-            <div class="group-title">{{ group.title }}</div>
-        </header>
-
-        <ul>
-            <li *ngFor="let item of group.items.sort()">
-                {{ item }}
-            </li>
-        </ul>
-    </article>
+<div class="skills-grid">
+  <article class="skill-card"
+    *ngFor="let group of skillGroups"
+    [class.ai-card]="group.title === 'AI & Machine Learning'"
+    [class.familiar-card]="group.familiar">
+    <div class="card-header">
+      <span class="card-icon">{{ group.icon }}</span>
+      <h3>{{ group.title }}</h3>
+      <span *ngIf="group.title === 'AI & Machine Learning'" class="ai-badge">New</span>
+      <span *ngIf="group.familiar" class="familiar-badge">Intermediate</span>
+    </div>
+    <p *ngIf="group.familiar" class="familiar-note">Comfortable writing real code — not claiming expert level.</p>
+    <div class="tag-list">
+      <span class="tag" *ngFor="let item of group.items">{{ item }}</span>
+    </div>
+  </article>
 </div>

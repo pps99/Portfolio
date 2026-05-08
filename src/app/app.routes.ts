@@ -1,29 +1,16 @@
 import { Routes } from '@angular/router';
-import { ContactComponent } from './contact/contact.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { CertificatesComponent } from './certificates/certificates.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
-    {
-        path: 'contact',
-        component: ContactComponent
-    },
-    {
-        path: 'experience',
-        component: ExperienceComponent
-    },
-    {
-        path: 'skills',
-        component: SkillsComponent
-    },
-    {
-        path: 'projects',
-        component: ProjectsComponent
-    },
-    {
-        path: '',
-        component: AboutComponent
-    }
+  { path: '', component: AboutComponent },
+  { path: 'skills', component: SkillsComponent },
+  { path: 'experience', component: ExperienceComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'certificates', component: CertificatesComponent },
+  { path: 'contact', component: ContactComponent }
 ];

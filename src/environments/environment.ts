@@ -1,3 +1,3 @@
 export const environment = {
-  openRouterApiKey: 'test-key'
+  openRouterApiKey: ''
 };

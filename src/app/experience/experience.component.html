@@ -1,24 +1,28 @@
 <div class="section-header">
-    <h2>Experience</h2>
-    <p>Professional roles and projects where I’ve applied my skills in real-world environments.</p>
+  <span class="section-label">Career</span>
+  <h2>Professional <span class="gradient-text">Experience</span></h2>
+  <p>Roles and projects where I've delivered impactful software in real-world environments.</p>
 </div>
 
 <div class="timeline">
-    <article class="experience-card" *ngFor="let exp of experiences">
-        <header>
-            <div class="role">{{ exp.role }}</div>
-            <div class="company"><a [href]="exp.company_site_link" target="_blank" rel="noreferrer">{{ exp.company
-                    }}</a></div>
-            <div class="meta">
-                <span>{{ exp.location }}</span>
-                <span>•</span>
-                <span>{{ exp.period }}</span>
-            </div>
-        </header>
-        <ul>
-            <li *ngFor="let point of exp.points">
-                {{ point }}
-            </li>
-        </ul>
-    </article>
+  <article class="exp-card" *ngFor="let exp of experiences; let first = first">
+    <div class="card-accent"></div>
+
+    <div class="card-top">
+      <div class="card-title-row">
+        <h3 class="role">{{ exp.role }}</h3>
+        <span class="exp-type">{{ exp.type }}</span>
+      </div>
+      <div class="company-row">
+        <a [href]="exp.company_site_link" target="_blank" rel="noreferrer" class="company">{{ exp.company }}</a>
+        <span class="separator">·</span>
+        <span class="location">{{ exp.location }}</span>
+      </div>
+      <span class="period">{{ exp.period }}</span>
+    </div>
+
+    <ul class="points">
+      <li *ngFor="let point of exp.points">{{ point }}</li>
+    </ul>
+  </article>
 </div>

@@ -1,23 +1,45 @@
 <div class="section-header">
-    <h2>Projects</h2>
-    <p>A selection of work that reflects my experience in full-stack development and automation.</p>
+  <span class="section-label">Work</span>
+  <h2>Featured <span class="gradient-text">Projects</span></h2>
+  <p>A curated selection of work spanning full-stack development, automation engineering, and AI integration.</p>
 </div>
 
-<div class="projects-timeline">
-    <article class="project-card" *ngFor="let project of projects">
-        <header>
-            <h3>{{ project.name }}</h3>
-            <p class="description">{{ project.description }}</p>
-        </header>
+<div class="projects-grid">
+  <article class="project-card" *ngFor="let project of projects">
+    <div class="card-glow"></div>
 
-        <p class="highlight">{{ project.highlight }}</p>
+    <div class="card-body">
+      <div class="card-top">
+        <h3>{{ project.name }}</h3>
+        <span *ngIf="isLive(project)" class="live-badge">
+          <span class="live-dot"></span>Live
+        </span>
+      </div>
 
-        <ul class="tech-list">
-            <li *ngFor="let t of project.tech">{{ t }}</li>
-        </ul>
+      <p class="description">{{ project.description }}</p>
 
-        <a *ngIf="project.link" class="project-link" [href]="project.link" target="_blank" rel="noreferrer">
-            View on GitHub →
-        </a>
-    </article>
+      <p class="highlight">
+        <svg class="highlight-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        {{ project.highlight }}
+      </p>
+    </div>
+
+    <div class="card-footer">
+      <div class="tech-list">
+        <span class="tech-tag" *ngFor="let t of project.tech">{{ t }}</span>
+      </div>
+
+      <a *ngIf="project.liveLink || project.link"
+         [href]="getPrimaryLink(project)"
+         target="_blank" rel="noreferrer"
+         class="project-link"
+         [class.live-link]="isLive(project)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path *ngIf="isLive(project)" d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+          <path *ngIf="!isLive(project)" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+        </svg>
+        {{ isLive(project) ? 'Live Demo' : 'View on GitHub' }}
+      </a>
+    </div>
+  </article>
 </div>

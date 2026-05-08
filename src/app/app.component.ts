@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, ChatbotComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, ChatbotComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

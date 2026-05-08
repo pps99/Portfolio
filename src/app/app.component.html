@@ -1,12 +1,16 @@
 <div class="page">
   <header class="navbar">
-    <div class="logo">Pyae Phyo Shan's Portfolio</div>
+    <a class="logo" routerLink="">
+      <span class="logo-name">Pyae Phyo Shan</span>
+      <span class="logo-dot">.</span>
+    </a>
     <nav>
-      <a routerLink="">About</a>
-      <a routerLink="/skills">Skills</a>
-      <a routerLink="/experience">Experience</a>
-      <a routerLink="/projects">Projects</a>
-      <a routerLink="/contact">Contact</a>
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About</a>
+      <a routerLink="/skills" routerLinkActive="active">Skills</a>
+      <a routerLink="/experience" routerLinkActive="active">Experience</a>
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/certificates" routerLinkActive="active">Certificates</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
     </nav>
   </header>
 
@@ -15,7 +19,7 @@
   </main>
 
   <footer class="footer">
-    <span>© 2025 Pyae Phyo Shan. All rights reserved.</span>
+    <span>© 2026 Pyae Phyo Shan · Built with Angular</span>
   </footer>
 
   <app-chatbot></app-chatbot>

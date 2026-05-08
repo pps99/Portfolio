@@ -1,92 +1,130 @@
 .page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(135deg, #050816, #0f172a);
-    color: #e5e7eb;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #040d1e;
+  color: #f1f5f9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+/* ── Navbar ── */
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 4vw;
-    backdrop-filter: blur(16px);
-    background: rgba(15, 23, 42, 0.8);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  height: 64px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(4, 13, 30, 0.85);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
 }
 
 .logo {
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    font-size: 0.9rem;
-    text-transform: uppercase;
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.logo-name {
+  background: linear-gradient(135deg, #f1f5f9 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-dot {
+  color: #38bdf8;
+  -webkit-text-fill-color: #38bdf8;
+  font-size: 1.3rem;
 }
 
 .navbar nav {
-    display: flex;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-.navbar a {
-    font-size: 0.9rem;
-    color: #cbd5f5;
-    text-decoration: none;
-    position: relative;
+.navbar nav a {
+  position: relative;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: color 0.2s ease, background 0.2s ease;
 }
 
-.navbar a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.25rem;
-    width: 0;
-    height: 2px;
-    background: #22d3ee;
-    transition: width 0.2s ease-out;
+.navbar nav a:hover {
+  color: #f1f5f9;
+  background: rgba(148, 163, 184, 0.08);
 }
 
-.navbar a:hover::after {
-    width: 100%;
+.navbar nav a.active {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
 }
 
+.navbar nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 2px;
+  background: #38bdf8;
+  border-radius: 999px;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+/* ── Main ── */
 main {
-    padding: 2rem 4vw 4rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+  padding: 3rem 4vw 4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1100px;
+  width: 100%;
+  margin-inline: auto;
 }
 
-section {
-    scroll-margin-top: 80px;
-}
-
+/* ── Footer ── */
 .footer {
-    padding: 1.5rem 4vw;
-    font-size: 0.8rem;
-    color: #9ca3af;
-    border-top: 1px solid rgba(148, 163, 184, 0.2);
-    text-align: center;
+  padding: 1.25rem 4vw;
+  font-size: 0.78rem;
+  color: #475569;
+  border-top: 1px solid rgba(148, 163, 184, 0.08);
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
+/* ── Responsive ── */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.85rem 1.25rem;
+    gap: 0.65rem;
+  }
 
-    .navbar nav {
-        flex-wrap: wrap;
-        gap: 0.75rem;
-    }
+  .navbar nav {
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
 
-    main {
-        padding-inline: 1.25rem;
-    }
+  main {
+    padding: 2rem 1.25rem 3rem;
+  }
 }

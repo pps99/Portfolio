@@ -1,8 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+
 interface SkillGroup {
   title: string;
+  icon: string;
   items: string[];
+  familiar?: boolean;
 }
 
 @Component({
@@ -15,30 +18,45 @@ interface SkillGroup {
 export class SkillsComponent {
   skillGroups: SkillGroup[] = [
     {
-      title: 'Languages & Core',
-      items: ['Ruby', 'Node.js', 'HTML', 'CSS', 'C#', 'JavaScript', 'TypeScript']
+      title: 'Languages',
+      icon: '{ }',
+      items: ['JavaScript', 'TypeScript', 'Ruby', 'HTML5', 'CSS3']
     },
     {
-      title: 'Frameworks & Libraries',
-      items: ['Angular', 'Ruby on Rails', 'Express.js', 'React', 'Nuxt.js', 'Robot Framework']
+      title: 'Frontend',
+      icon: '⬡',
+      items: ['Angular', 'React', 'Nuxt.js', 'Responsive Design', 'REST API Integration']
+    },
+    {
+      title: 'Backend',
+      icon: '⚙',
+      items: ['Ruby on Rails', 'Node.js (Express)', 'RESTful API Design', 'Authentication & Authorization', 'WebSockets']
+    },
+    {
+      title: 'Databases',
+      icon: '◈',
+      items: ['MySQL', 'MongoDB', 'Redis', 'Snowflake']
     },
     {
       title: 'Testing & Automation',
-      items: ['Selenium', 'Appium', 'Postman', 'CI/CD integration', 'Automated test suites']
+      icon: '✓',
+      items: ['Selenium', 'Appium', 'Robot Framework', 'Postman', 'CI/CD Integration']
     },
     {
-      title: 'Databases & Tools',
-      items: ['MySQL', 'MongoDB', 'Snowflake', 'Redis', 'Git', 'Sourcetree']
+      title: 'AI & Machine Learning',
+      icon: '◎',
+      items: ['LLM Engineering', 'Retrieval-Augmented Generation (RAG)', 'QLoRA Fine-tuning', 'AI Agents', 'Prompt Engineering']
     },
     {
-      title: 'Soft Skills',
-      items: [
-        'Excellent communication',
-        'Strong problem-solving',
-        'Works well under pressure',
-        'Adaptable to new tech',
-        'Effective time management'
-      ]
+      title: 'Tools & DevOps',
+      icon: '⊞',
+      items: ['Git', 'Sourcetree', 'VS Code', 'Cursor', 'Vercel']
+    },
+    {
+      title: 'Familiar With',
+      icon: '~',
+      items: ['C#', '.NET Framework', 'ASP.NET Core', 'Entity Framework Core'],
+      familiar: true
     }
   ];
 }

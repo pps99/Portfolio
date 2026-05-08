@@ -7,6 +7,7 @@ interface ExperienceItem {
   company_site_link: string;
   location: string;
   period: string;
+  type: string;
   points: string[];
 }
 
@@ -25,12 +26,12 @@ export class ExperienceComponent {
       company_site_link: 'https://www.redlamp.tech/#/',
       location: 'Bangkok, Thailand',
       period: 'Dec 2024 – Apr 2026',
+      type: 'Full-time',
       points: [
-        'Develop and maintain automated test scripts for web apps using Selenium and Robot Framework.',
-        'Automate mobile app testing with Appium, reducing manual test effort.',
-        'Design and execute test cases integrated into CI/CD pipelines.',
-        'Identify and resolve automation challenges to optimise execution time.',
-        'Collaborate with developers to increase test coverage and improve software quality.'
+        'Designed and maintained enterprise-grade automated test frameworks for web applications using Selenium and Robot Framework.',
+        'Automated end-to-end mobile application testing with Appium, significantly reducing manual QA effort and regression cycle time.',
+        'Integrated automated test suites into CI/CD pipelines, improving release reliability and deployment confidence.',
+        'Collaborated cross-functionally with frontend and backend engineers to expand test coverage and elevate software quality standards.'
       ]
     },
     {
@@ -39,36 +40,39 @@ export class ExperienceComponent {
       company_site_link: 'https://metateammyanmar.com/',
       location: 'Yangon, Myanmar',
       period: 'Apr 2022 – Apr 2024',
+      type: 'Full-time',
       points: [
-        'Developed and maintained web applications, focusing on performance and reliability.',
-        'Debugged and resolved complex code and data issues impacting system behaviour.',
-        'Collaborated closely with teams to identify bugs and improve system stability.',
-        'Prepared documentation for system architecture, workflows, and usage guidelines.',
-        'Introduced Git-based workflows that improved collaboration and code tracking.'
+        'Developed and maintained production-grade web applications using modern frontend and backend technologies, ensuring high performance and reliability.',
+        'Designed and implemented RESTful backend APIs and responsive frontend features, delivering seamless end-user experiences.',
+        'Debugged and resolved critical issues related to performance bottlenecks, data consistency, and application stability.',
+        'Established Git-based workflows and code review practices that improved team collaboration and code maintainability.',
+        'Authored technical documentation covering system architecture, data flows, and developer onboarding guides.'
       ]
     },
     {
-      role: 'University Capstone Project',
+      role: 'Full-Stack Developer — University Capstone',
       company: 'MetaTeam Myanmar Co. Ltd',
       company_site_link: 'https://metateammyanmar.com/',
       location: 'Yangon, Myanmar',
       period: 'May 2023 – Sep 2023',
+      type: 'Capstone Project',
       points: [
-        'Built an online cake ordering platform with Nuxt.js (frontend) and Ruby on Rails (backend).',
-        'Implemented authentication, profile management, and balance recharge features.',
-        'Designed admin features for orders, balances, items, and sales reporting.',
-        'Used WebSocket for real-time updates and notifications.'
+        'Designed and built a full-stack online cake ordering platform using Nuxt.js (frontend) and Ruby on Rails (backend).',
+        'Implemented JWT-based authentication, role-based access control, and balance recharge functionality.',
+        'Engineered an admin dashboard for order management, inventory control, balance approvals, and real-time sales analytics.',
+        'Integrated WebSocket-based real-time notifications, significantly improving admin response times.'
       ]
     },
     {
-      role: 'OJT Course',
+      role: 'Junior Developer Trainee',
       company: 'BIB Training Center',
       company_site_link: 'https://school.bib-mm.com/',
       location: 'Yangon, Myanmar',
       period: 'Dec 2021 – Apr 2022',
+      type: 'OJT Program',
       points: [
-        'Completed intensive training in HTML, CSS, jQuery, and Ruby on Rails.',
-        'Delivered CRUD assignments and a final group project using Ruby on Rails.'
+        'Completed intensive hands-on training in HTML5, CSS3, jQuery, and Ruby on Rails, building production-ready CRUD applications.',
+        'Delivered a full-stack group capstone project applying MVC architecture, responsive design principles, and Git-based collaboration.'
       ]
     }
   ];
