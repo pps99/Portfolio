@@ -19,10 +19,17 @@ interface Certificate {
 export class CertificatesComponent {
   certificates: Certificate[] = [
     {
+      title: 'AI Coder: Complete Claude Code & Coding Agents Course',
+      track: 'AI-Assisted Development',
+      topics: ['Claude Code', 'Coding Agents', 'AI Workflows', 'Prompt Engineering'],
+      year: '2026',
+      description: 'Practical course covering AI-assisted software development using Claude Code and autonomous coding agents — applied directly to real-world development workflows.'
+    },
+    {
       title: 'AI Engineer Core Track',
       track: 'Artificial Intelligence & Machine Learning',
       topics: ['LLM Engineering', 'Retrieval-Augmented Generation (RAG)', 'QLoRA Fine-tuning', 'AI Agents'],
-      year: '2025',
+      year: '2026',
       description: 'Comprehensive certification covering modern AI engineering practices — from building and fine-tuning large language models to designing autonomous AI agents and production-ready RAG pipelines.'
     }
   ];

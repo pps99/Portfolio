@@ -20,7 +20,7 @@ export class SkillsComponent {
     {
       title: 'Languages',
       icon: '{ }',
-      items: ['JavaScript', 'TypeScript', 'Ruby', 'HTML5', 'CSS3']
+      items: ['C#', 'JavaScript', 'TypeScript', 'Ruby', 'HTML5', 'CSS3']
     },
     {
       title: 'Frontend',
@@ -35,7 +35,12 @@ export class SkillsComponent {
     {
       title: 'Databases',
       icon: '◈',
-      items: ['MySQL', 'MongoDB', 'Redis', 'Snowflake']
+      items: ['SQL', 'MySQL', 'MongoDB', 'Redis', 'Snowflake']
+    },
+    {
+      title: 'C# / .NET',
+      icon: '◇',
+      items: ['C#', 'ASP.NET Core', '.NET Framework', 'LINQ', 'Entity Framework Core', 'MVC / Web API', 'REST API Development']
     },
     {
       title: 'Testing & Automation',
@@ -52,11 +57,5 @@ export class SkillsComponent {
       icon: '⊞',
       items: ['Git', 'Sourcetree', 'VS Code', 'Cursor', 'Vercel']
     },
-    {
-      title: 'Familiar With',
-      icon: '~',
-      items: ['C#', '.NET Framework', 'ASP.NET Core', 'Entity Framework Core'],
-      familiar: true
-    }
   ];
 }
