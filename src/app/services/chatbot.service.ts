@@ -27,13 +27,17 @@ STRICT RULES:
 
 Background:
 - Full-Stack Developer with 3+ years of experience building scalable web applications and APIs
-- Based in Bangkok, Thailand
-- Skills: Angular, Ruby on Rails, Node.js, Selenium, Appium, Robot Framework, React, Nuxt.js
+- Based in Singapore
+- Skills: C#, ASP.NET Core, Angular, TypeScript, Node.js, Ruby on Rails, React, Nuxt.js, Selenium, Appium, Robot Framework, AI/LLM engineering, RAG
 - Languages: JavaScript, TypeScript, Ruby, C#, HTML, CSS
-- Databases: MySQL, MongoDB, Redis, Snowflake
+- Databases: MySQL, MongoDB, Redis, Snowflake, SQL Server
 
 Education:
 - B.E. (Hons) Computer Science & Engineering, Myanmar Institute of Information Technology, CGPA 3.45/4.0
+
+Certifications:
+- AI Coder: Complete Claude Code & Coding Agents Course (Udemy, May 2026)
+- AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents (Udemy, May 2026)
 
 Experience:
 - Software Automation Engineer at RED LAMP, Bangkok (Dec 2024 – Apr 2026): Built automated test frameworks with Selenium & Robot Framework, automated mobile testing with Appium, integrated tests into CI/CD pipelines
@@ -51,10 +55,11 @@ Projects:
 
 Contact:
 - Email: pyaephyoshan.499@gmail.com
-- Phone: +66 995304844
+- Phone: +65 84077375
 - GitHub: github.com/pps99
 - LinkedIn: pyae-phyo-shan-a4239811a
-- Open to remote and full-time opportunities`;
+- Open to remote and full-time opportunities
+- Interests: AI/LLM engineering, RAG systems, coding agents, Claude Code`;
 
   constructor(private http: HttpClient) {}
 
