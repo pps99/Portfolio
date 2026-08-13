@@ -20,6 +20,22 @@ interface Project {
 export class ProjectsComponent {
   projects: Project[] = [
     {
+      name: 'Fitness AI Agent',
+      description:
+        'AI-powered fitness assistant that provides nutrition, workout, and recovery recommendations through a retrieval-backed knowledge workflow.',
+      tech: ['Python', 'FastAPI', 'LangGraph', 'ChromaDB', 'RAG', 'Docker'],
+      highlight:
+        'Built a RAG pipeline with document ingestion, embedding generation, semantic search, and multi-agent LangGraph coordination for specialized fitness guidance.'
+    },
+    {
+      name: 'Pizza Ordering Platform',
+      description:
+        'Full-stack food ordering platform with Angular frontend, ASP.NET Core services, menu management, ordering workflows, and customer operations.',
+      tech: ['Angular 18', '.NET 8', 'ASP.NET Core', 'Microservices', 'Docker', 'Docker Compose'],
+      highlight:
+        'Designed microservices and RESTful APIs with Docker-based local orchestration, following clean architecture and API-driven development practices.'
+    },
+    {
       name: 'Personal Portfolio & AI Digital Twin',
       description:
         'Professionally designed portfolio application showcasing projects, skills, and experience — featuring an AI-powered digital twin chatbot that answers recruiter and visitor questions in real time.',
@@ -50,7 +66,7 @@ export class ProjectsComponent {
       name: 'Full-Stack E-commerce Application',
       description:
         'Enterprise-grade e-commerce platform with product management, shopping cart, order processing, and a data-rich admin dashboard with real-time revenue and sales analytics.',
-      tech: ['Angular 18', 'TypeScript', 'ASP.NET Core', 'Entity Framework Core', 'SQL Server', 'JWT Auth', 'Chart.js'],
+      tech: ['Angular 18', 'TypeScript', 'ASP.NET Core', '.NET 8', 'Entity Framework Core', 'SQL Server', 'JWT Auth'],
       highlight:
         'Role-based authentication, admin analytics featuring orders/revenue charts and top-selling product rankings, backed by secure RESTful APIs built on ASP.NET Core.',
       link: 'https://github.com/pps99/ecommerce-app/tree/main'
@@ -73,6 +89,14 @@ export class ProjectsComponent {
         'Reduced regression testing cycle time and improved test stability across multiple production projects by implementing page-object model patterns and data-driven test strategies.'
     }
   ];
+
+  get featuredProject(): Project {
+    return this.projects[0];
+  }
+
+  get supportingProjects(): Project[] {
+    return this.projects.slice(1);
+  }
 
   isLive(project: Project): boolean {
     return !!project.liveLink;

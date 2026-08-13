@@ -4,8 +4,29 @@
   <p>A curated selection of work spanning full-stack development, automation engineering, and AI integration.</p>
 </div>
 
+<section class="featured-project" *ngIf="featuredProject as project">
+  <div class="featured-copy">
+    <span class="featured-label">Featured Case Study</span>
+    <h3>{{ project.name }}</h3>
+    <p>{{ project.description }}</p>
+    <div class="featured-highlight">
+      <svg class="highlight-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      <span>{{ project.highlight }}</span>
+    </div>
+    <div class="tech-list">
+      <span class="tech-tag" *ngFor="let t of project.tech">{{ t }}</span>
+    </div>
+  </div>
+
+  <div class="featured-visual">
+    <span>AI</span>
+    <strong>RAG</strong>
+    <small>LangGraph · FastAPI · ChromaDB</small>
+  </div>
+</section>
+
 <div class="projects-grid">
-  <article class="project-card" *ngFor="let project of projects">
+  <article class="project-card" *ngFor="let project of supportingProjects">
     <div class="card-glow"></div>
 
     <div class="card-body">

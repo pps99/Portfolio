@@ -7,16 +7,22 @@
 }
 
 .contact-card {
-  background: rgba(7, 16, 34, 0.85);
-  border: 1px solid rgba(148, 163, 184, 0.1);
-  border-radius: 1.25rem;
+  background: #ffffff;
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
   padding: 1.6rem;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  animation: fade-up 0.62s ease both;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.contact-col:nth-child(2) .contact-card {
+  animation-delay: 0.08s;
 }
 
 .contact-card:hover {
-  border-color: rgba(56, 189, 248, 0.25);
-  box-shadow: 0 0 28px rgba(56, 189, 248, 0.06), 0 12px 32px rgba(0, 0, 0, 0.2);
+  border-color: rgba(15, 118, 110, 0.3);
+  box-shadow: 0 22px 54px rgba(15, 23, 42, 0.12);
+  transform: translateY(-5px);
 }
 
 .card-label {
@@ -24,7 +30,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #38bdf8;
+  color: #0f766e;
   margin-bottom: 1.25rem;
 }
 
@@ -46,32 +52,37 @@
 .contact-icon {
   width: 36px;
   height: 36px;
-  border-radius: 0.65rem;
-  background: rgba(56, 189, 248, 0.07);
-  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 8px;
+  background: rgba(15, 118, 110, 0.08);
+  border: 1px solid rgba(15, 118, 110, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #38bdf8;
+  color: #0f766e;
   flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.contact-list li:hover .contact-icon {
+  transform: rotate(-4deg) scale(1.08);
 }
 
 .github-icon {
-  background: rgba(148, 163, 184, 0.07);
-  border-color: rgba(148, 163, 184, 0.18);
-  color: #e2e8f0;
+  background: #f8fafc;
+  border-color: #dbe3ee;
+  color: #0f172a;
 }
 
 .linkedin-icon {
-  background: rgba(56, 189, 248, 0.07);
-  border-color: rgba(56, 189, 248, 0.18);
-  color: #38bdf8;
+  background: rgba(15, 118, 110, 0.08);
+  border-color: rgba(15, 118, 110, 0.2);
+  color: #0f766e;
 }
 
 .portfolio-icon {
-  background: rgba(129, 140, 248, 0.07);
-  border-color: rgba(129, 140, 248, 0.18);
-  color: #818cf8;
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.22);
+  color: #2563eb;
 }
 
 .contact-info {
@@ -92,14 +103,14 @@
 .contact-info a,
 .contact-value {
   font-size: 0.875rem;
-  color: #cbd5e1;
+  color: #475569;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
 
 .contact-info a:hover {
-  color: #38bdf8;
+  color: #0f766e;
 }
 
 .availability-note {
@@ -108,12 +119,13 @@
   gap: 0.55rem;
   margin-top: 1rem;
   padding: 0.75rem 1rem;
-  background: rgba(52, 211, 153, 0.05);
-  border: 1px solid rgba(52, 211, 153, 0.2);
-  border-radius: 0.875rem;
+  background: rgba(22, 163, 74, 0.08);
+  border: 1px solid rgba(22, 163, 74, 0.18);
+  border-radius: 8px;
   font-size: 0.82rem;
-  color: #6ee7b7;
+  color: #15803d;
   font-weight: 500;
+  animation: scale-in 0.55s 0.18s ease both;
 }
 
 .avail-dot {
@@ -123,7 +135,7 @@
   background: #34d399;
   box-shadow: 0 0 8px rgba(52, 211, 153, 0.6);
   flex-shrink: 0;
-  animation: pulse 2.5s infinite;
+  animation: status-pulse 2.5s infinite;
 }
 
 @keyframes pulse {

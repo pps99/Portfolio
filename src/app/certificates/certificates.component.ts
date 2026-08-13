@@ -31,6 +31,13 @@ export class CertificatesComponent {
       topics: ['LLM Engineering', 'Retrieval-Augmented Generation (RAG)', 'QLoRA Fine-tuning', 'AI Agents'],
       year: '2026',
       description: 'Comprehensive certification covering modern AI engineering practices — from building and fine-tuning large language models to designing autonomous AI agents and production-ready RAG pipelines.'
+    },
+    {
+      title: 'AWS AI & ML Scholars - 2026 Challenge Completion',
+      track: 'Cloud AI & Machine Learning',
+      topics: ['AWS AI', 'Machine Learning', 'Cloud Fundamentals', 'AI Applications'],
+      year: '2026',
+      description: 'Challenge completion focused on AI and machine learning concepts in AWS-oriented cloud environments.'
     }
   ];
 }

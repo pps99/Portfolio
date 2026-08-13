@@ -5,6 +5,7 @@ interface SkillGroup {
   title: string;
   icon: string;
   items: string[];
+  summary: string;
   familiar?: boolean;
 }
 
@@ -20,42 +21,50 @@ export class SkillsComponent {
     {
       title: 'Languages',
       icon: '{ }',
-      items: ['C#', 'JavaScript', 'TypeScript', 'Ruby', 'HTML5', 'CSS3']
+      summary: 'Core languages used across web apps, APIs, AI services, and database work.',
+      items: ['C#', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'Ruby']
     },
     {
       title: 'Frontend',
       icon: '⬡',
-      items: ['Angular', 'React', 'Nuxt.js', 'Responsive Design', 'REST API Integration']
+      summary: 'Production UI development with component architecture and API integration.',
+      items: ['Angular', 'React', 'Nuxt.js', 'HTML5', 'CSS3', 'REST API Integration']
     },
     {
       title: 'Backend',
       icon: '⚙',
-      items: ['Ruby on Rails', 'Node.js (Express)', 'RESTful API Design', 'Authentication & Authorization', 'WebSockets']
+      summary: 'API-first backend development across .NET, Node, Python, and Rails systems.',
+      items: ['ASP.NET Core', '.NET 8', 'Node.js', 'Express.js', 'FastAPI', 'Ruby on Rails', 'REST APIs']
     },
     {
       title: 'Databases',
       icon: '◈',
-      items: ['SQL', 'MySQL', 'MongoDB', 'Redis', 'Snowflake']
+      summary: 'Relational, document, cache, warehouse, and vector storage for modern apps.',
+      items: ['SQL Server', 'MySQL', 'MongoDB', 'Redis', 'Snowflake', 'ChromaDB', 'Vector Databases']
     },
     {
-      title: 'C# / .NET',
+      title: 'Architecture & APIs',
       icon: '◇',
-      items: ['C#', 'ASP.NET Core', '.NET Framework', 'LINQ', 'Entity Framework Core', 'MVC / Web API', 'REST API Development']
+      summary: 'System design patterns for clean, maintainable, deployable services.',
+      items: ['Microservices', 'Clean Architecture', 'Authentication', 'Authorization', 'API-driven Development', 'Docker Compose']
     },
     {
       title: 'Testing & Automation',
       icon: '✓',
+      summary: 'Automation coverage for web, mobile, backend workflows, and release confidence.',
       items: ['Selenium', 'Appium', 'Robot Framework', 'Postman', 'CI/CD Integration']
     },
     {
       title: 'AI & Machine Learning',
       icon: '◎',
-      items: ['LLM Engineering', 'Retrieval-Augmented Generation (RAG)', 'QLoRA Fine-tuning', 'AI Agents', 'Prompt Engineering']
+      summary: 'Applied AI engineering with retrieval, agents, embeddings, and LLM workflows.',
+      items: ['LLM Engineering', 'Retrieval-Augmented Generation (RAG)', 'LangGraph', 'ChromaDB', 'AI Agents', 'Prompt Engineering']
     },
     {
       title: 'Tools & DevOps',
       icon: '⊞',
-      items: ['Git', 'Sourcetree', 'VS Code', 'Cursor', 'Vercel']
+      summary: 'Daily development, deployment, debugging, and collaboration tools.',
+      items: ['Git', 'Docker', 'Postman', 'CI/CD', 'VS Code', 'Cursor', 'Vercel']
     },
   ];
 }

@@ -15,7 +15,7 @@ interface OpenRouterResponse {
 @Injectable({ providedIn: 'root' })
 export class ChatbotService {
   private apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-  private model = 'openai/gpt-oss-120b:free';
+  private model = 'nvidia/nemotron-nano-9b-v2:free';
 
   private systemPrompt = `You are a digital twin of Pyae Phyo Shan, a Full-Stack Developer and Software Automation Engineer. Your only purpose is to answer questions about Pyae Phyo Shan — his skills, experience, projects, education, and contact information. Answer as if you are him, in first person.
 

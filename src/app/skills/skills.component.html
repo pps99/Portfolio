@@ -1,18 +1,36 @@
 <div class="section-header">
   <span class="section-label">Expertise</span>
   <h2>Skills &amp; <span class="gradient-text">Technologies</span></h2>
-  <p>A curated set of languages, frameworks, and tools I apply in production environments.</p>
+  <p>Languages, frameworks, databases, and AI tooling I use to build reliable production systems.</p>
 </div>
 
-<div class="skills-grid">
-  <article class="skill-card"
-    *ngFor="let group of skillGroups"
-    [class.ai-card]="group.title === 'AI & Machine Learning'"
-    [class.familiar-card]="group.familiar">
+<section class="skills-layout">
+  <aside class="skills-overview">
+    <span class="overview-label">Engineering Stack</span>
+    <h3>Backend-first, AI-aware, production-minded.</h3>
+    <p>
+      My strongest work sits at the intersection of APIs, data, automation, and practical AI systems.
+    </p>
+    <div class="overview-stack">
+      <span>API Design</span>
+      <span>RAG</span>
+      <span>Automation</span>
+      <span>Cloud-ready</span>
+    </div>
+  </aside>
+
+  <div class="skills-grid">
+    <article class="skill-card"
+      *ngFor="let group of skillGroups"
+      [class.ai-card]="group.title === 'AI & Machine Learning'"
+      [class.familiar-card]="group.familiar">
     <div class="card-header">
       <span class="card-icon">{{ group.icon }}</span>
-      <h3>{{ group.title }}</h3>
-      <span *ngIf="group.title === 'AI & Machine Learning'" class="ai-badge">New</span>
+      <div>
+        <h3>{{ group.title }}</h3>
+        <p>{{ group.summary }}</p>
+      </div>
+      <span *ngIf="group.title === 'AI & Machine Learning'" class="ai-badge">AI</span>
       <span *ngIf="group.familiar" class="familiar-badge">Intermediate</span>
     </div>
     <p *ngIf="group.familiar" class="familiar-note">Comfortable writing real code — not claiming expert level.</p>
@@ -20,4 +38,5 @@
       <span class="tag" *ngFor="let item of group.items">{{ item }}</span>
     </div>
   </article>
-</div>
+  </div>
+</section>

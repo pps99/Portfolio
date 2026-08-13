@@ -28,10 +28,11 @@ export class ExperienceComponent {
       period: 'Dec 2024 – Apr 2026',
       type: 'Full-time',
       points: [
-        'Designed and maintained enterprise-grade automated test frameworks for web applications using Selenium and Robot Framework.',
-        'Automated end-to-end mobile application testing with Appium, significantly reducing manual QA effort and regression cycle time.',
-        'Integrated automated test suites into CI/CD pipelines, improving release reliability and deployment confidence.',
-        'Collaborated cross-functionally with frontend and backend engineers to expand test coverage and elevate software quality standards.'
+        'Developed and maintained automated testing frameworks for web and mobile applications using Selenium, Robot Framework, and Appium.',
+        'Designed reusable automation components that reduced manual testing effort and improved regression testing efficiency.',
+        'Validated REST APIs and backend workflows using Postman and automated test suites.',
+        'Collaborated with software engineers to identify defects, improve software quality, and support production releases.',
+        'Participated in requirement analysis, test planning, and CI/CD testing activities throughout the software development lifecycle.'
       ]
     },
     {
@@ -42,11 +43,12 @@ export class ExperienceComponent {
       period: 'Apr 2022 – Apr 2024',
       type: 'Full-time',
       points: [
-        'Developed and maintained production-grade web applications using modern frontend and backend technologies, ensuring high performance and reliability.',
-        'Designed and implemented RESTful backend APIs and responsive frontend features, delivering seamless end-user experiences.',
-        'Debugged and resolved critical issues related to performance bottlenecks, data consistency, and application stability.',
-        'Established Git-based workflows and code review practices that improved team collaboration and code maintainability.',
-        'Authored technical documentation covering system architecture, data flows, and developer onboarding guides.'
+        'Developed and maintained enterprise web applications using Angular, Ruby on Rails, Node.js, JavaScript, and SQL.',
+        'Designed and implemented RESTful APIs, authentication modules, and business workflows for client systems.',
+        'Built frontend interfaces and backend services while improving system performance, security, and maintainability.',
+        'Optimized database queries and resolved performance bottlenecks to improve application responsiveness.',
+        'Collaborated with cross-functional teams using Git workflows, code reviews, and Agile practices.',
+        'Participated in requirement discussions, technical design, implementation, testing, and deployment activities.'
       ]
     },
     {
