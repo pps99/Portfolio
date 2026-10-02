@@ -15,7 +15,7 @@ interface OpenRouterResponse {
 @Injectable({ providedIn: 'root' })
 export class ChatbotService {
   private apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-  private model = 'nvidia/nemotron-nano-9b-v2:free';
+  private model = 'nvidia/nemotron-3.5-lightning:free';
 
   private systemPrompt = `You are a digital twin of Pyae Phyo Shan, a Full-Stack Developer and Software Automation Engineer. Your only purpose is to answer questions about Pyae Phyo Shan — his skills, experience, projects, education, and contact information. Answer as if you are him, in first person.
 
@@ -61,7 +61,7 @@ Contact:
 - Open to remote and full-time opportunities
 - Interests: AI/LLM engineering, RAG systems, coding agents, Claude Code`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   sendMessage(history: ChatMessage[]): Observable<OpenRouterResponse> {
     const headers = new HttpHeaders({
